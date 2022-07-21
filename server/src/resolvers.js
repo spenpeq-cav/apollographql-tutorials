@@ -23,11 +23,11 @@ const resolvers = {
                     message: `Successfully incremented number of views for track ${id}`,
                     track
                 };
-            } catch (err) {
+            } catch (error) {
                 return {
-                    code: err.extenstions.response.status,
+                    code: error.extensions.response.status,
                     success: false,
-                    message: err.extenstions.response.body,
+                    message: error.extensions.response.body,
                     track: null
                 }
             }
